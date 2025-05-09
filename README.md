@@ -1,1 +1,1 @@
-# DigtialMuseum.com
+# DigitalMuseum.com
