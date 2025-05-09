@@ -1,0 +1,257 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Museo Sans', sans-serif; /* Apply Museo Sans */
+}
+
+/* Flexbox Layout for the Navigation */
+/* Flexbox Layout for the Navigation */
+nav {
+    display: flex;
+    justify-content: space-between; /* Spread the logo and nav links */
+    align-items: center; /* Vertically center the items */
+    position: fixed;
+    top: 0; /* Ensures the navigation bar stays at the top */
+    left: 0; /* Aligns the navigation to the left */
+    width: 100%; /* Ensure nav spans the full width of the screen */
+    background-color: transparent; /* Initially transparent */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    z-index: 10; /* Keeps the nav on top of other content */
+    padding: 0.8em;
+}
+
+nav.scrolled {
+    background-color: #333; /* Set a solid background color when scrolled */
+}
+
+/* Other CSS (same as you provided) */
+.hr5 {
+    position: fixed;
+    top: 5.5em;
+    left: -0em;
+    width: 84.5em;
+}
+
+.logo {
+    display: flex; /* Align logo and name horizontally */
+    align-items: center; /* Vertically center the logo and name */
+    margin-left: 1em;
+    position: relative; /* Keep logo in the same place */
+}
+
+.logo img {
+    width: 4em; /* Adjust the image size */
+    height: 4em; /* Maintain the aspect ratio */
+    margin-right: .7em; /* Space between image and name */
+}
+
+.name {
+    position: fixed;
+    left: 6em;
+    top: 0em;
+    font-size: 1.2em;
+    color: darkgreen;
+}
+
+/* Flexbox Layout for the Navigation */
+nav {
+    display: flex;
+    justify-content: space-between; /* Spread the logo and nav links */
+    align-items: center; /* Vertically center the items */
+    position: fixed;
+    top: 0; /* Ensures the navigation bar stays at the top */
+    left: 0; /* Aligns the navigation to the left */
+    width: 100%; /* Ensure nav spans the full width of the screen */
+    background-color: transparent; /* Initially transparent */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    z-index: 10; /* Keeps the nav on top of other content */
+    padding: 0.8em;
+}
+
+nav.scrolled {
+    background-color: #333; /* Set a solid background color when scrolled */
+}
+
+.logo {
+    display: flex; /* Align logo and name horizontally */
+    align-items: center; /* Vertically center the logo and name */
+    margin-left: 1em;
+    position: relative; /* Keep logo in the same place */
+}
+
+.logo img {
+    width: 4em; /* Adjust the image size */
+    height: 4em; /* Maintain the aspect ratio */
+    margin-right: .7em; /* Space between image and name */
+}
+
+.name {
+    position: fixed;
+    left: 6em;
+    top: 0em;
+    font-size: 1.2em;
+    color: darkgreen;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin-right: 4em; /* To adjust the position of the nav */
+    position: relative; /* Needed for positioning */
+}
+
+.nav-links li {
+    position: relative; /* Needed for dropdown positioning */
+    margin-left: 2em; /* Space between links */
+}
+
+.nav-links a {
+    color: darkgreen; /* Change this to any color you want, e.g., #ff0000 for red */
+    text-decoration: none;
+    font-weight: 600; /* Extra bold text */
+    font-size: 1.3em;
+    font-family: 'Museo Sans', sans-serif; /* Apply Museo Sans */
+}
+
+.nav-links a:hover {
+    color: red;
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 20px 20px; /* Added padding for the header */
+    height: 110vh; /* Makes the content take 80% of the screen height */
+}
+
+/* Page Title */
+.collection {
+    text-align: center;
+    padding: 3em;
+    transform: translateY(1.5em);
+}
+
+.hr1 {
+    border: 2px solid green;
+    width: 60em;
+    margin: auto;
+    position: relative;
+    top: -1em;
+}
+
+/* Collection Group */
+.collection-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    transform: translateY(2em);
+}
+
+/* Collection Row */
+.collection-row {
+    display: flex;
+    justify-content: center;
+    gap: 5em;
+    margin-bottom: 20px;
+}
+
+/* Collection Container */
+.collection-container {
+    width: 25em;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #f9f9f9; /* Light background for better contrast */
+    border: 2px solid #ddd; /* Border for separation */
+}
+
+.collection-container img {
+    width: 20em;
+    height: 15em;
+    border-radius: 8px;
+}
+
+/* Different Borders */
+.trophy-container,
+.medal-container,
+.memorabilia-container,
+.certificate-container {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 2px solid #ddd;
+}
+
+.trophy-container {
+    border-color: black;
+}
+
+.medal-container {
+    border-color: green;
+}
+
+.memorabilia-container {
+    border-color: green;
+}
+
+.certificate-container {
+    border-color: black;
+}
+
+/* Text Content */
+.collection-title {
+    font-size: 20px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.collection-description {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Additional Horizontal Rule */
+.hr2 {
+    border: 2px solid green;
+    width: 60em;
+    margin: auto;
+    position: relative;
+    top: 6em;
+}
+
+    
+footer {
+    background: lightgray;
+    color: black;
+    padding: 3em 0;
+    transform: translateY(10em);
+    background-color: lightgray;
+}
+
+footer a {
+    color:black;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.credits {
+    position: fixed;
+    top: 2em;
+    left: 30em;
+}
+
+.IT{
+    transform: translateX(3.5em);
+}

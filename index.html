@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to our homepage.">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Museo+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    
+</head>
+
+<style>
+.welcome {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2em;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  color: #555;
+  animation: typing 4s steps(30) 1s forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  to {
+    width: 77%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+    </style>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <nav>
+            <!-- Logo on the left -->
+            <div class="logo">
+                <img src="logo.png" alt="Logo" />
+                <p class="name"><br><b>CREATION OF DIGITAL MUSEUM AND <br> ARCHIVES FOR OLIVAREZ COLLEGE</b></p>
+            </div>
+
+            <!-- Navigation links -->
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#video">Video</a></li>
+                <li class="dropdown">
+                    <a href="about.html">About</a>
+                    <div class="dropdown-content">
+                    </div>
+                </li>
+                <li><a href="collection.html">Collection</a></li>
+                <li class="dropdown">
+                    <a href="1976-1980.html">Exhibit and Achievements</a>
+                </li>
+            </ul>
+            <hr class="hr1">
+        </nav>
+        <div class="container">
+            <!-- Slideshow -->
+            <div class="image-container">
+                <div class="slideshow-container">
+                    <img class="slide fade" src="museum.png" alt="Image 1" style="border: 4px solid black;">
+                    <img class="slide fade" src="example.jpg" alt="Image 2" style="border: 4px solid black;">
+                    <img class="slide fade" src="trophy.png" alt="Image 3" style="border: 4px solid black;">
+                </div>
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+
+            <div class="text-container">
+                <h1 class="welcome">WELCOME TO DIGITAL MUSEUM</h1>
+                <p>The Archives and Museum of Olivarez College houses the historical records of the school. These are primary source documents that have accumulated over the years. Likewise, this section cares for a collection of artifacts and other objects of scientific, artistic, or historical importance to the Olivarez family and makes them available for public viewing.</p>
+                <a href="https://www.zippano.com/preview/17cs468r0ob9u600-1746809600" target="_blank">
+                    <img src="museum.png" alt="Description of the image" height="200" width="200" />
+                  </a>            </div>
+        </div>
+        <iframe width="90%" height="500px" allowFullScreen="true" allow="accelerometer; magnetometer; gyroscope" style="display:block; margin:20px auto; border:0 none; max-width:880px;border-radius:8px; box-shadow: 0 1px 1px rgba(0,0,0,0.11),0 2px 2px rgba(0,0,0,0.11),0 4px 4px rgba(0,0,0,0.11),0 6px 8px rgba(0,0,0,0.11),0 8px 16px rgba(0,0,0,0.11);" src="https://panoraven.com/en/embed/Uloo3FOIco"></iframe>
+    <footer>
+        <div class="credits">
+            <p>&copy; 2025 Olivarez College Paranaque. All rights reserved.</p>
+            <p class="IT">Information Technology Department</p>
+        </div>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+
+        // Function to display the slides
+        function showSlides() {
+            let slides = document.querySelectorAll(".slide");
+            slides.forEach(slide => slide.style.display = "none"); // Hide all slides first
+
+            // If the slideIndex exceeds the number of slides, reset it to 0 (looping back)
+            if (slideIndex >= slides.length) {
+                slideIndex = 0;
+            }
+
+            // Show the current slide
+            slides[slideIndex].style.display = "block";
+
+            // Move to the next slide after a delay
+            slideIndex++;
+            setTimeout(showSlides, 5000); // Change slide every 5 seconds (5000 milliseconds)
+        }
+
+        // Function to change the slide manually (next/previous)
+        function changeSlide(n) {
+            let slides = document.querySelectorAll(".slide");
+            slideIndex += n;
+
+            if (slideIndex < 0) {
+                slideIndex = slides.length - 1; // If we go past the first image, go to the last one
+            }
+
+            showSlides();
+        }
+
+        // Start the slideshow when the page loads
+        showSlides();
+    </script>
+
+</body>
+</html>

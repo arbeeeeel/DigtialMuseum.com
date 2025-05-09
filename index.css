@@ -1,0 +1,226 @@
+ /* Basic Reset */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+/* Apply Museo Sans font to the entire page */
+body {
+    font-family: 'Museo Sans', sans-serif; /* Apply Museo Sans */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    transition: background 0.2s ease-in-out;}
+
+
+/* Flexbox Layout for the Navigation */
+nav {
+    display: flex;
+    justify-content: space-between; /* Spread the logo and nav links */
+    align-items: center; /* Vertically center the items */
+    position: fixed;
+    top: 0; /* Ensures the navigation bar stays at the top */
+    left: 0; /* Aligns the navigation to the left */
+    width: 100%; /* Ensure nav spans the full width of the screen */
+    background-color: transparent; /* Initially transparent */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    z-index: 10; /* Keeps the nav on top of other content */
+    padding: 0.8em;
+}
+
+nav.scrolled {
+    background-color: #333; /* Set a solid background color when scrolled */
+}
+
+/* Other CSS (same as you provided) */
+.hr1 {
+    position: fixed;
+    top: 5.5em;
+    left: -0em;
+    width: 84.5em;
+}
+
+.logo {
+    display: flex; /* Align logo and name horizontally */
+    align-items: center; /* Vertically center the logo and name */
+    margin-left: 1em;
+    position: relative; /* Keep logo in the same place */
+}
+
+.logo img {
+    width: 4em; /* Adjust the image size */
+    height: 4em; /* Maintain the aspect ratio */
+    margin-right: .7em; /* Space between image and name */
+}
+
+.name {
+    position: fixed;
+    left: 6em;
+    top: 0em;
+    font-size: 1.2em;
+    color: darkgreen;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin-right: 4em; /* To adjust the position of the nav */
+    position: relative; /* Needed for positioning */
+}
+
+.nav-links li {
+    position: relative; /* Needed for dropdown positioning */
+    margin-left: 2em; /* Space between links */
+}
+
+.nav-links a {
+    color: green; /* Change this to any color you want, e.g., #ff0000 for red */
+    text-decoration: none;
+    font-weight: 600; /* Extra bold text */
+    font-size: 1.3em;
+    font-family: 'Museo Sans', sans-serif; /* Apply Museo Sans */
+}
+
+.nav-links a:hover {
+    color: red;
+}
+
+/* Container for the layout */
+.container {
+    display: flex; /* Enables flexbox layout */
+    justify-content: flex-start; /* Align items to the left side */
+    align-items: center; /* Vertically align items in the center */
+    padding: auto; /* Optional padding around the container */
+    background-color: transparent;
+    transform: translateY(8em) translateX(2em);
+    border: 1px solid black;
+    max-width: 80em;
+}
+
+/* Image styling */
+.image-container {
+    padding: 2em; /* Optional padding inside the image container */
+    transform: translateY(2em) translateX(-1em);
+}
+
+.image-container img {
+    width: 30em; /* Adjust the image size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Text styling */
+.text-container {
+    flex-grow: 1; /* Allows text container to take up available space */
+    max-width: 40em; /* Optional: limits the width of the text container */
+    margin-left: 5em; /* Adds space between the image and text */
+    transform: translateY(1em);
+    
+}
+
+.text-container h1 {
+    margin-bottom: 0.7em; /* Space below the heading */
+}
+
+.text-container p {
+    font-size: 1rem; /* Paragraph text size */
+    line-height: 1.6; /* Line height for readability */
+}
+
+/* Container for the layout of Overview */
+
+footer {
+    background: lightgray;
+    color: black;
+    padding: 3em 0;
+    transform: translateY(10em);
+}
+
+footer a {
+    color:black;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.credits {
+    position: fixed;
+    top: 2em;
+    left: 30em;
+}
+
+.IT{
+    transform: translateX(3.5em);
+}
+
+/* Styling for the Slideshow Container */
+.slideshow-container {
+    position: relative;
+    width: 100%; /* Full width */
+    height: auto; /* Adjust based on the images */
+    right: -3em;
+    
+}
+
+/* Hide all slides by default */
+.slide {
+    display: none;
+    width: 100%; /* Make sure all images take the same width */
+    height: auto;
+    transition: opacity 4s ease-in-out; /* Smooth fade effect */
+}
+
+/* Active class to show images */
+.fade {
+    display: block; /* Shows the image */
+}
+
+/* Optional: Adding a fade-in effect when transitioning images */
+@keyframes fade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* For all images inside the slideshow */
+.slideshow-container img {
+    width: 80%;  /* Set width to 80% of the container */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+/* Or, set specific width and height */
+.slideshow-container img {
+    width: 30em;  /* Set fixed width */
+    height: 18em; /* Set fixed height */
+}
+
+/* Position the prev/next buttons */
+.prev, .next {
+
+    background-color: lightgray;
+    color: black; /* Button text color */
+    border: none; /* Remove borders */
+    font-size: 1rem; /* Size of the arrow icon */
+    padding: 1em 1em; /* Padding to make the button larger */
+    z-index: 10; /* Make sure the buttons are above the images */
+    transition: background-color 5s ease; /* Smooth transition on hover */
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darken background on hover */
+}
+
+    /* Positioning the 'Prev' button */
+    .prev {
+        transform: translateY(-10em);
+    }
+
+    /* Positioning the 'Next' button */
+    .next {
+        transform: translatey(-10em) translatex(30.7em);
+        right: auto;
+
+    }
